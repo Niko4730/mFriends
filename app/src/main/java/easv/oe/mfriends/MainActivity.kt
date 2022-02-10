@@ -16,6 +16,9 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
 
     }
-    fun onClickLevel2(view: View) {}
+    fun onClickLevel2(view: View) {
+        val intent = Intent(this, ActivityFriendlist2::class.java)
+        startActivity(intent)
+    }
     fun onClickLevel3(view: View) {}
 }
