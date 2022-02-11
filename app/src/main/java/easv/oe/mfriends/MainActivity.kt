@@ -20,5 +20,8 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, ActivityFriendlist2::class.java)
         startActivity(intent)
     }
-    fun onClickLevel3(view: View) {}
+    fun onClickLevel3(view: View) {
+        val intent = Intent(this, ActivityFriendlist3::class.java)
+        startActivity(intent)
+    }
 }
