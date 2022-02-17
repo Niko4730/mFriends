@@ -13,9 +13,11 @@ class ActivityFriendlist1 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_friendlist)
 
-        val mFriendNames = Friends().getAllNames()
+        val mFriendNames: Array<String> = Friends().getAllNames()
 
-        val adapter : ListAdapter  = ArrayAdapter(this, android.R.layout.simple_list_item_1, mFriendNames)
+        val adapter : ListAdapter  = ArrayAdapter<String>(this,
+                                                          android.R.layout.simple_list_item_1,
+                                                          mFriendNames)
 
         lvFriends.adapter = adapter
 

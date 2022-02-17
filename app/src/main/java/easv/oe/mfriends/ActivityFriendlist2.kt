@@ -27,7 +27,6 @@ class ActivityFriendlist2 : AppCompatActivity() {
     }
 
     private fun asListMap(src: Array<BEFriend>): List<Map<String, String?>> {
-
         return src.map{ person -> hashMapOf("name" to person.name, "phone" to person.phone) }
     }
 
