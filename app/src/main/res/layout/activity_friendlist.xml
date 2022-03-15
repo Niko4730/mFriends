@@ -30,14 +30,16 @@
 
             <ImageButton
                 android:id="@+id/btnAdd"
-                android:layout_width="49dp"
-                android:layout_height="45dp"
-                app:srcCompat="@drawable/addfriend"
-                tools:layout_editor_absoluteX="346dp"
-                tools:layout_editor_absoluteY="6dp"
+                android:layout_width="62dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="348dp"
+                android:layout_marginTop="8dp"
                 android:background="@android:color/transparent"
-                tools:ignore="MissingConstraints"
-                android:onClick="onClickBtnAdd"/>
+                android:onClick="onClickBtnAdd"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/addfriend"
+                tools:ignore="SpeakableTextPresentCheck" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.appbar.AppBarLayout>

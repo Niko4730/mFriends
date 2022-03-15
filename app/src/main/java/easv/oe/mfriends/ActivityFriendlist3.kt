@@ -24,8 +24,9 @@ class ActivityFriendlist3 : AppCompatActivity()
 
         lvFriends.adapter = adapter
     }
-    internal class FriendAdapter(context: Context,
-                                 private val friends: Array<BEFriend>
+    internal class FriendAdapter(
+        context: Context,
+        private val friends: MutableList<BEFriend>
     ) : ArrayAdapter<BEFriend>(context, 0, friends)
     {
         // these colors are used to toogle the background of the list items.

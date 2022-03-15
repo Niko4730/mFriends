@@ -27,11 +27,11 @@ class ActivityFriendlist4 : AppCompatActivity()
         lvFriends.adapter = adapter
     }
     fun onClickBtnAdd(view: View) {
-        val intent = Intent(this, ActivityFriendlist1::class.java)
+        val intent = Intent(this, ActivityAddEdit::class.java)
         startActivity(intent)
     }
     internal class FriendAdapter(context: Context,
-                                 private val friends: Array<BEFriend>
+        private val friends: MutableList<BEFriend>
     ) : ArrayAdapter<BEFriend>(context, 0, friends)
     {
         private val colours = intArrayOf(

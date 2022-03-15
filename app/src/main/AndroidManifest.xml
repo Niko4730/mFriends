@@ -22,6 +22,9 @@
             android:name=".ActivityFriendlist4"
             android:exported="false" />
         <activity
+            android:name=".ActivityAddEdit"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

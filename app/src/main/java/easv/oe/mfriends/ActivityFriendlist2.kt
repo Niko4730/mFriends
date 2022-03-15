@@ -26,7 +26,7 @@ class ActivityFriendlist2 : AppCompatActivity() {
         lvFriends.setOnItemClickListener { _,_,pos, _ -> onListItemClick(pos) }
     }
 
-    private fun asListMap(src: Array<BEFriend>): List<Map<String, String?>> {
+    private fun asListMap(src: MutableList<BEFriend>): List<Map<String, String?>> {
         return src.map{ person -> hashMapOf("name" to person.name, "phone" to person.phone) }
     }
 
