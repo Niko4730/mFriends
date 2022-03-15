@@ -1,8 +1,8 @@
 package easv.oe.mfriends
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,28 +10,33 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.easv.oe.friends.Model.BEFriend
 import com.easv.oe.friends.Model.Friends
 import kotlinx.android.synthetic.main.activity_friendlist.*
 
-class ActivityFriendlist3 : AppCompatActivity()
+class ActivityFriendlist4 : AppCompatActivity()
 {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_friendlist)
+        setContentView(R.layout.activity_friendlist)//set layout to friendlist.xml
+        setSupportActionBar(myToolbar)
 
         val adapter = FriendAdapter(this, Friends().getAll())
 
         lvFriends.adapter = adapter
     }
+    fun onClickBtnAdd(view: View) {
+        val intent = Intent(this, ActivityFriendlist1::class.java)
+        startActivity(intent)
+    }
     internal class FriendAdapter(context: Context,
                                  private val friends: Array<BEFriend>
     ) : ArrayAdapter<BEFriend>(context, 0, friends)
     {
-        // these colors are used to toogle the background of the list items.
         private val colours = intArrayOf(
-            Color.parseColor("#AAAAAA"),
-            Color.parseColor("#CCCCCC")
+            Color.parseColor("#E8E8E8"),
+            Color.parseColor("#FFFFFF")
         )
 
         override fun getView(position: Int, v: View?, parent: ViewGroup): View {
@@ -54,5 +59,8 @@ class ActivityFriendlist3 : AppCompatActivity()
 
             return resView
         }
+
+
     }
+
 }

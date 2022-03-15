@@ -20,7 +20,7 @@
         android:layout_gravity="center"
         android:width="200dp"
         android:textSize="30dp"
-        android:layout_margin="50dp"
+        android:layout_margin="40dp"
         android:text="Level 1"
         android:onClick="onClickLevel1"
         />
@@ -30,7 +30,7 @@
         android:layout_gravity="center"
         android:width="200dp"
         android:textSize="30dp"
-        android:layout_margin="50dp"
+        android:layout_margin="40dp"
         android:text="Level 2"
         android:onClick="onClickLevel2"
         />
@@ -40,9 +40,19 @@
         android:layout_gravity="center"
         android:width="200dp"
         android:textSize="30dp"
-        android:layout_margin="50dp"
+        android:layout_margin="40dp"
         android:text="Level 3"
         android:onClick="onClickLevel3"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:width="200dp"
+        android:textSize="30dp"
+        android:layout_margin="40dp"
+        android:text="Level 4"
+        android:onClick="onClickLevel4"
         />
 
 

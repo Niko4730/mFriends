@@ -29,6 +29,9 @@ class Friends {
 
     fun getAll(): Array<BEFriend> = mFriends
 
+    fun addFriend (beFriend: BEFriend) {
+        mFriends[mFriends.size] = beFriend
+    }
 
     fun getAllNames(): Array<String> = mFriends.map { p -> p.name }.toTypedArray()
 

@@ -4,7 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:orientation="vertical">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/myToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:title="Level4 - Friends"
+                app:titleTextColor="#FFFFFF" />
+
+            <ImageButton
+                android:id="@+id/btnAdd"
+                android:layout_width="49dp"
+                android:layout_height="45dp"
+                app:srcCompat="@drawable/addfriend"
+                tools:layout_editor_absoluteX="346dp"
+                tools:layout_editor_absoluteY="6dp"
+                android:background="@android:color/transparent"
+                tools:ignore="MissingConstraints"
+                android:onClick="onClickBtnAdd"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
 
     <ListView
         android:id="@+id/lvFriends"
